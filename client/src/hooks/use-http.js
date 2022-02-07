@@ -14,7 +14,6 @@ const useHttp = () => {
 				body: requestConfig.body ? JSON.stringify(requestConfig.body) : null,
 			});
 			const data = await response.json();
-			console.log(data);
 			if (!response.ok) {
 				throw new Error(data.error);
 			}

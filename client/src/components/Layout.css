@@ -1,0 +1,9 @@
+.container {
+	display: flex;
+	flex-direction: column;
+}
+
+.heading {
+	color: #3f3f46 !important;
+	text-align: center !important;
+}

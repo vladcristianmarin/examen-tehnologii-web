@@ -36,8 +36,8 @@ const init = async () => {
 	} catch (error) {
 		console.error('Unable to connect to the database:', error);
 	}
-	// require('../models/movie.model');
-	// require('../models/crewmember.model');
+	require('../models/virtualshelf.model');
+	require('../models/book.model');
 	await sequelize.sync();
 	const db = sequelize.models;
 	Object.keys(db).forEach((model) => {
