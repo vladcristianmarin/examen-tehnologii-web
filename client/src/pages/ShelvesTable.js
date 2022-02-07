@@ -13,8 +13,8 @@ import { classNames } from 'primereact/utils';
 import useHttp from '../hooks/use-http';
 import './ShelvesTable.css';
 
-// const SERVER = `${window.location.protocol}//${window.location.hostname}:${window.location.port}`;
-const SERVER = `${window.location.protocol}//${window.location.hostname}:5001`;
+const SERVER = `${window.location.protocol}//${window.location.hostname}:${window.location.port}`;
+// const SERVER = `${window.location.protocol}//${window.location.hostname}:5001`;
 
 const ShelvesTable = () => {
 	const baseShelf = {
