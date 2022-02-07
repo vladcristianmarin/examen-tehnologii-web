@@ -9,10 +9,10 @@ const App = (props) => {
 		<Layout>
 			<Switch>
 				<Redirect path='/' exact to='/shelves' />
-				<Route path='/shelves' exact>
+				<Route path='/shelvestable' exact>
 					<ShelvesTable />
 				</Route>
-				<Route path='/shelf/:shelfId/books'>
+				<Route path='/shelfsbooks/:shelfId/books'>
 					<BookTable />
 				</Route>
 				{/* <Route path='*'>

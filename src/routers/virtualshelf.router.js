@@ -239,4 +239,31 @@ router.post('/import', async (req, res) => {
 	}
 });
 
+router.get('/export', async (_req, res) => {
+	try {
+		const result = [];
+		const shelves = await VirtualShelf.findAll();
+		for (let _shelf of shelves) {
+			const shelf = {
+				description: _shelf.description,
+				createdAt: _shelf.createdAt,
+				books: [],
+			};
+			const books = await _shelf.getBooks();
+			for (let _book of books) {
+				shelf.books.push({
+					id: _book.id,
+					title: _book.title,
+					genre: _book.genre,
+					url: _book.url,
+				});
+			}
+			result.push(shelf);
+		}
+		res.send(result);
+	} catch (err) {
+		res.status(500).send({ err });
+	}
+});
+
 module.exports = router;
