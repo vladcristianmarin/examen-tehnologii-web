@@ -234,6 +234,7 @@ router.post('/import', async (req, res) => {
 			}
 			await shelf.save();
 		}
+		res.send(201);
 	} catch (err) {
 		res.status(500).send({ err });
 	}
@@ -256,6 +257,7 @@ router.get('/export', async (_req, res) => {
 					title: _book.title,
 					genre: _book.genre,
 					url: _book.url,
+					shelfId: _book.shelfId,
 				});
 			}
 			result.push(shelf);
