@@ -8,7 +8,7 @@ const App = (props) => {
 	return (
 		<Layout>
 			<Switch>
-				<Redirect path='/' exact to='/shelves' />
+				<Redirect path='/' exact to='/shelvestable' />
 				<Route path='/shelvestable' exact>
 					<ShelvesTable />
 				</Route>
