@@ -208,7 +208,7 @@ const BookTable = () => {
 					label='Back'
 					icon='pi pi-arrow-left'
 					className='p-button-help mr-2'
-					onClick={() => history.push('/shelves')}
+					onClick={() => history.push('/shelvestable')}
 				/>
 				<Button
 					label='New'

@@ -240,7 +240,7 @@ const ShelvesTable = () => {
 				<Button
 					icon='pi pi-book'
 					className='p-button-rounded p-button-info mr-2'
-					onClick={() => history.push(`/shelf/${rowData.id}/books`)}
+					onClick={() => history.push(`/shelfsbooks/${rowData.id}/books`)}
 				/>
 				<Button
 					icon='pi pi-pencil'
